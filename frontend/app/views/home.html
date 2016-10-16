@@ -1,0 +1,52 @@
+<div class="row main-wrapper">
+    <div class="col-md-8">
+        <div class="post-wrapper">
+            <div class="post" ng-repeat="blog in vm.blogs | orderObjectBy:'date':true" >
+                <h2 class='post-title'>{{blog.title}}</h2>
+                <div class="post-meta">
+                    <span>Created at:</span>
+                    <span class="post-date">{{blog.date | date}}</span>
+
+                </div>
+                <div ng-if="blog.tags" class="post-tags">
+                    <span ng-repeat="tag in blog.tags">{{tag}}</span>
+                </div>
+                <div class="post-content">
+                    <p>{{blog.content}}</p>
+                </div>
+                <div class="post-more">
+                    <a class="btn btn-primary read-more" ng-click="open()" ui-sref='blogpost({id:blog._id})'>Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="side-wrapper">
+            <div class="popular-posts">
+                <h2>POPULAR POSTS</h2>
+                <ul>
+                    <li>
+                        <a href="">What is Lorem Ipsum?</a>
+                    </li>
+                    <li>
+                        <a href="">Why do we use it?</a>
+                    </li>
+                    <li>
+                        <a href="">Where does it come from?</a>
+                    </li>
+                    <li>
+                        <a href="">Where can I get some?</a>
+                    </li>
+                    <li>
+                        <a href="">The standard Lorem Ipsum passage, used since the 1500s</a>
+                    </li>
+                    <li>
+                        <a href="">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>

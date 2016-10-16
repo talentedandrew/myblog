@@ -1,0 +1,508 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+/* custom css*/
+.navbar{
+      background-color: #4484CE;
+    border-radius: 0;
+    margin: 0;
+}
+navbar-right{
+  float: right;
+}
+.navbar-default .navbar-brand {
+    color: #fefefe;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fefefe;
+    background-color: #2363ab;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fefefe;
+}
+/* Main wrapper*/
+.main-wrapper{
+  width: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: 50px;
+}
+/*Post wrapper*/
+.post-wrapper{
+  width: 100%;
+  display:block;
+  padding: 5px;
+}
+.post-wrapper .post{
+  width:100%;
+  display: block;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.post-wrapper .post .post-title{
+  font-size: 25px;
+  color: #2363ab;
+  margin: 5px 0 10px 0;
+}
+.post-wrapper .post .post-meta {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.post-wrapper .post .post-meta span{
+  font-size:15px;
+  color: #000; 
+}
+.post-wrapper .post .post-meta span.post-date{
+  font-size: 16px;
+  font-style: italic;
+  color: #2363ab;
+}
+.post-wrapper .post .post-tags{
+   width: 100%;
+   display: block;
+   padding: 5px;
+   margin-bottom: 20px;
+   border-top:1px solid #ddd;
+   border-bottom:1px solid #ddd; 
+}
+.post-wrapper .post .post-tags span{
+  padding: 3px 8px;
+  font-size: 14px;
+  background-color: #ddd;
+  color: #2363ab;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+.post-wrapper .post .post-content{
+  width: 100%;
+   display: block;
+   padding: 5px;
+}
+.post-wrapper .post .post-content p{
+  font-size: 15px;
+  white-space: normal;
+    overflow: hidden;
+    width: 100%;
+    height: 131px;
+    text-overflow: ellipsis;
+}
+.post-wrapper .post .post-more{
+  width: 100%;
+   display: block;
+   padding: 5px;
+   text-align: right;
+}
+.side-wrapper{
+  width: 100%;
+  display:block;
+  padding: 5px;
+}
+.popular-posts{
+  width: 100%;
+  min-height: 300px;
+  display: block;
+  border: 1px solid #ddd;
+}
+.popular-posts h2{
+  width: 100%;
+  padding: 15px;
+  font-size: 25px;
+  color: #fff;
+  background-color: #2363ab;
+  margin: 0 0 10px 0; 
+  text-align: center;
+}
+.popular-posts ul{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.popular-posts ul li{
+  width: 100%;
+  display: block;
+  padding: 2px 5px;
+}
+/* Custom page footer */
+.footer {
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4484CE;
+    border-radius: 0;
+    margin: 0;
+    /* padding-top: 19px; */
+    color: #777;
+    border:0;
+        z-index: 99999;
+
+}
+/* Login Popup*/
+.login-wrapper{
+  background-color: #3498DB;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    /*display: none;*/
+}
+.login-wrapper .close{
+  position: absolute;
+    right: 10px;
+    font-size: 36px;
+    color: #ffffff;
+    z-index: 999999999999;
+}
+.login-wrapper .login {
+position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 194px;
+}
+.login-wrapper .login-screen {
+background-color: #FFF;
+padding: 20px;
+border-radius: 5px
+}
+
+.login-wrapper .app-title {
+text-align: center;
+color: #777;
+}
+
+.login-wrapper .login-form {
+text-align: center;
+}
+.login-wrapper .control-group {
+margin-bottom: 10px;
+}
+
+.login-wrapper input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+.login-wrapper input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.login-wrapper .btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.login-wrapper .btn:hover {
+  background-color: #2980B9;
+}
+
+.login-wrapper .login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+	margin-top: 12px;
+}
+/* Single Blog Post*/
+.single-post-wrapper{
+  width: 100%;
+  display:block;
+  padding: 5px;
+}
+.single-post-wrapper .post{
+  width:100%;
+  display: block;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.single-post-wrapper .post .post-title{
+  font-size: 25px;
+  color: #2363ab;
+  margin: 5px 0 10px 0;
+}
+.single-post-wrapper .post .post-meta {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.single-post-wrapper .post .post-meta span{
+  font-size:15px;
+  color: #000; 
+}
+.single-post-wrapper .post .post-meta span.post-date{
+  font-size: 16px;
+  font-style: italic;
+  color: #2363ab;
+}
+.single-post-wrapper .post .post-tags{
+   width: 100%;
+   display: block;
+   padding: 5px;
+   margin-bottom: 20px;
+   border-top:1px solid #ddd;
+   border-bottom:1px solid #ddd; 
+}
+.single-post-wrapper .post .post-tags span{
+  padding: 3px 8px;
+  font-size: 14px;
+  background-color: #ddd;
+  color: #2363ab;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+.single-post-wrapper .post .post-content{
+  width: 100%;
+   display: block;
+   padding: 5px;
+}
+.single-post-wrapper .post .post-content p{
+  font-size: 15px;
+  white-space: normal;
+  width: 100%;
+}
+/* Comments*/
+.comment-wrapper {
+  width: 100%;
+  display:block;
+  padding: 5px;
+}
+.post-comment{
+  width: 100%;
+  display: block;
+  height: 200px;
+}
+.userPic{
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 10px;
+}
+.userPic .avatar {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 15px;
+}
+.userComment{
+  width: 100%;
+  height: 120px;
+  margin: 0;
+  padding: 20px;
+}
+.userComment .comment{
+  width: 100%;
+}
+.comment-wrapper .panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.comment-wrapper .panel-white {
+  border: 1px solid #dddddd;
+}
+.comment-wrapper .panel-white  .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.comment-wrapper .panel-white  .panel-footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.comment-wrapper .post .post-heading {
+  height: 95px;
+  padding: 20px 15px;
+}
+.comment-wrapper .post .post-heading .avatar {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 15px;
+}
+.comment-wrapper .post .post-heading .meta .title {
+  margin-bottom: 0;
+}
+.comment-wrapper .post .post-heading .meta .title a {
+  color: black;
+}
+.comment-wrapper .post .post-heading .meta .title a:hover {
+  color: #aaaaaa;
+}
+.comment-wrapper .post .post-heading .meta .time {
+  margin-top: 8px;
+  color: #999;
+}
+.comment-wrapper .post .post-image .image {
+  width: 100%;
+  height: auto;
+}
+.comment-wrapper .post .post-description {
+  padding: 15px;
+}
+.comment-wrapper .post .post-description p {
+  font-size: 14px;
+}
+.comment-wrapper .post .post-description .stats {
+  margin-top: 20px;
+}
+.comment-wrapper .post .post-description .stats .stat-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+.comment-wrapper .post .post-description .stats .stat-item .icon {
+  margin-right: 8px;
+}
+.comment-wrapper .post .post-footer {
+  border-top: 1px solid #ddd;
+  padding: 15px;
+}
+.comment-wrapper .post .post-footer .input-group-addon a {
+  color: #454545;
+}
+.comment-wrapper .post .post-footer .comments-list {
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.comment-wrapper .post .post-footer .comments-list .comment {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.comment-wrapper .post .post-footer .comments-list .comment .avatar {
+  width: 35px;
+  height: 35px;
+}
+.comment-wrapper .post .post-footer .comments-list .comment .comment-heading {
+  display: block;
+  width: 100%;
+}
+.comment-wrapper .post .post-footer .comments-list .comment .comment-heading .user {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.comment-wrapper .post .post-footer .comments-list .comment .comment-heading .time {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 0;
+  display: inline;
+}
+.comment-wrapper .post .post-footer .comments-list .comment .comment-body {
+  margin-left: 50px;
+}
+.comment-wrapper  .post .post-footer .comments-list .comment > .comments-list {
+  margin-left: 50px;
+}

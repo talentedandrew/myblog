@@ -1,0 +1,32 @@
+<div class="writeBlog" ng-controller="BlogCtrl as vm">
+	<h1>Write Blog</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<form name="blogForm" novalidate ng-submit="blogForm.$valid && vm.createBlog(vm.title,vm.tags,vm.content)">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">Title</span>
+						<input type="text" class="form-control" name="title" ng-model="vm.title" placeholder="PLace your title here" aria-describedby="basic-addon1" required>
+						<span class="errors" ng-show="blogForm.title.$error.required && blogForm.$submitted">Enter the title </span>
+					</div>
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon2">Tags</span>
+						<input type="text" class="form-control" name="tags" ng-model="vm.tags" placeholder="Enter the tags separated by commas" aria-describedby="basic-addon2" required>
+						<span class="errors" ng-show="blogForm.tags.$error.required && blogForm.$submitted">Enter the tags </span>
+					</div>
+					<br>
+					<div class="input-group">
+						<textarea class="form-control" style="min-width: 100%" name="content" ng-model="vm.content" placeholder="place your content here" required></textarea>
+						<span class="errors" ng-show="blogForm.content.$error.required && blogForm.$submitted">Enter the content </span>
+					</div>
+					<br>
+					<div class="input-group">
+						<button tabindex="-1" class="btn btn-default" type="submit">Submit</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
