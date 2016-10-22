@@ -1,6 +1,6 @@
 'use strict';
 angular.module('frontendApp')
-  .service('blogService', function ($q, $http) {
+  .service('blogService', ['$q', '$http',function ($q, $http) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     var service = {};
     service.createBlog = createBlog;
@@ -122,4 +122,4 @@ angular.module('frontendApp')
         });
       return deferred.promise;
     }
-  });
+  }]);

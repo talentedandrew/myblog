@@ -1,6 +1,6 @@
 'use strict';
 angular.module('frontendApp')
-  .controller('HomeCtrl', function (blogService) {
+  .controller('HomeCtrl', ['blogService',function (blogService) {
     var vm = this;
 
     blogService.getAllBlogs().then(function (response) {
@@ -15,4 +15,4 @@ angular.module('frontendApp')
 
     });
 
-  });
+  }]);

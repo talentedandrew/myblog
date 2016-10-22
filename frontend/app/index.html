@@ -55,7 +55,7 @@
       </div>
       <!--</div>-->
     </div>
-    <div ng-if="vm.loginOn" class="login-wrapper">
+    <div ng-if="vm.loginOn" class="login-wrapper" ng-init="showReg = false">
         <div class="close" ng-click="vm.closeLogin();">
           X
         </div>
@@ -80,7 +80,58 @@
                     </div>
 
                     <button class="btn btn-primary btn-large btn-block" type="submit">login</button>
-                    <a class="login-link" href="#">Lost your password?</a>
+                    <a class="login-link" ng-click="showReg=!showReg">Register a new account?</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="register"  ng-show="showReg">
+            <div class="closeReg" ng-click="showReg=!showReg">x</div>
+            <div class="register-screen">
+                <div class="app-title">
+                    <h1>Register</h1>
+                </div>
+
+                <div class="register-form">
+                  <form name="registerForm" novalidate ng-submit="registerForm.$valid && vm.register(vm.firstname,vm.lastname,vm.email,vm.contact,vm.password)">
+                    <div class="control-group">
+                        <input type="text" class="register-field" name="firstname" value="" placeholder="Firstname" id="register-firstname" ng-model="vm.firstname" ng-minlength="2" ng-maxlength="20" required>
+                        <label class="register-field-icon fui-user" for="register-firstname"></label>
+                        <span ng-show="registerForm.firstname.$error.required && registerForm.$submitted">Please enter your Firstname</span>
+                        <span ng-show="registerForm.firstname.$error.minlength && registerForm.$submitted">Please enter a valid Firstname</span>
+                        <span ng-show="registerForm.firstname.$error.maxlength && registerForm.$submitted">Your Firstname is too long!</span>
+                    </div>
+                    <div class="control-group">
+                        <input type="text" class="register-field" name="lastname" value="" placeholder="Lastname" id="register-lastname" ng-model="vm.lastname" required>
+                        <label class="register-field-icon fui-user" for="register-lastname"></label>
+                        <span ng-show="registerForm.lastname.$error.required && registerForm.$submitted">Please enter your Lastname</span>
+                    </div>
+                    <div class="control-group">
+                        <input type="text" class="register-field" name="email" value="" placeholder="Email" id="register-email" ng-model="vm.email" required>
+                        <label class="register-field-icon fui-user" for="register-email"></label>
+                        <span ng-show="registerForm.email.$error.required && registerForm.$submitted">Please enter your email</span>
+                    </div>
+                    <div class="control-group">
+                        <input type="text" class="register-field" name="contact" value="" placeholder="contact" id="contact-name" ng-model="vm.contact" required>
+                        <label class="register-field-icon fui-user" for="register-contact"></label>
+                        <span ng-show="registerForm.contact.$error.required && registerForm.$submitted">Please enter your email</span>
+                    </div>
+                    <div class="control-group">
+                        <input type="password" class="register-field" name="password" value="" ng-minlength="8" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" placeholder="password" id="register-pass" ng-model="vm.password" required>
+                        <label class="register-field-icon fui-lock" for="register-pass"></label>
+                        <span ng-show="registerForm.password.$error.required && registerForm.$submitted">Please enter your password</span>
+                        <span ng-show="registerForm.password.$error.minlength && registerForm.$submitted">password should be atleast 8 characters in length</span>
+                        <span ng-show="registerForm.password.$error.maxlength && registerForm.$submitted">password should not exceed a maximum of 20 characters</span>
+                        <span ng-show="registerForm.password.$error.pattern && registerForm.$submitted">Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol.)</span>
+                    </div>
+                    <div class="control-group">
+                        <input type="password" class="register-field" name="confirmpassword" value="" placeholder="confirmpassword" id="register-confirmpassword" ng-model="vm.confirmpassword" valid-password-c="vm.password" required>
+                        <label class="register-field-icon fui-lock" for="register-confirmpassword"></label>
+                        <span ng-show="registerForm.password.$error.required && registerForm.$submitted">Please confirm your password</span>
+                        <span ng-show="registerForm.password.$error.noMatch && registerForm.$submitted">Passwords do not match</span>
+                    </div>
+
+                    <button class="btn btn-primary btn-large btn-block" type="submit">Register</button>
                     </form>
                 </div>
             </div>

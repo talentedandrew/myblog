@@ -1,6 +1,6 @@
 'use strict';
 angular.module('frontendApp')
-  .controller('BlogCtrl', function (blogService,$window,$state) {
+  .controller('BlogCtrl',[ 'blogService','$window','$state', function (blogService,$window,$state) {
     var vm = this;
     var storage = $window.localStorage;
     vm.createBlog = function(title,tags,content){
@@ -13,4 +13,4 @@ angular.module('frontendApp')
         }
       });
     };
-  });
+  }]);

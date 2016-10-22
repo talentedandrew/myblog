@@ -218,7 +218,8 @@ navbar-right{
     /* padding-top: 19px; */
     color: #777;
     border:0;
-        z-index: 99999;
+        z-index: 999;
+
 
 }
 /* Login Popup*/
@@ -313,6 +314,90 @@ box-shadow: none;
   display: block;
 	margin-top: 12px;
 }
+
+/* Register*/
+.login-wrapper .register {
+position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 523px;
+    z-index: 22;
+}
+.login-wrapper .register  .closeReg{
+  position: absolute;
+  font-size: 20px;
+  color: #3498DB;
+  right: 5px;
+  top: 2px;
+  line-height: 20px;
+}
+.login-wrapper .register-screen {
+background-color: #FFF;
+padding: 20px;
+border-radius: 5px
+}
+
+.login-wrapper .app-title {
+text-align: center;
+color: #777;
+}
+
+.login-wrapper .register-form {
+text-align: center;
+}
+.login-wrapper .control-group {
+margin-bottom: 10px;
+}
+
+.login-wrapper input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+.login-wrapper input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.login-wrapper .btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.login-wrapper .btn:hover {
+  background-color: #2980B9;
+}
+
+.login-wrapper .login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+	margin-top: 12px;
+}
+
 /* Single Blog Post*/
 .single-post-wrapper{
   width: 100%;

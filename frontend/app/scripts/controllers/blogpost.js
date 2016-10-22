@@ -1,6 +1,6 @@
 'use strict';
 angular.module('frontendApp')
-  .controller('BlogpostCtrl', function (blogService, $stateParams) {
+  .controller('BlogpostCtrl',['blogService', '$stateParams', function (blogService, $stateParams) {
     var vm = this;
     var storage = window.localStorage;
     vm.isCollapsed = true;
@@ -43,4 +43,4 @@ angular.module('frontendApp')
       });
 
     }
-  });
+  }]);
