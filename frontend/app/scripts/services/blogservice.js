@@ -14,7 +14,7 @@ angular.module('frontendApp')
       var deferred = $q.defer();
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/writeblog',
+        url: 'http://52.74.247.211:3000/writeblog',
         data: data,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -38,7 +38,7 @@ angular.module('frontendApp')
       var deferred = $q.defer();
       $http({
         method: 'GET',
-        url: 'http://localhost:3000/getallblogs'
+        url: 'http://52.74.247.211:3000/getallblogs'
       })
         .success(function (response) {
           deferred.resolve(response);
@@ -53,7 +53,7 @@ angular.module('frontendApp')
       var deferred = $q.defer();
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/getblogbyid',
+        url: 'http://52.74.247.211:3000/getblogbyid',
         data: data,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -78,7 +78,7 @@ angular.module('frontendApp')
       var deferred = $q.defer();
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/postcomment',
+        url: 'http://52.74.247.211:3000/postcomment',
         data: data,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -103,7 +103,7 @@ angular.module('frontendApp')
       var deferred = $q.defer();
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/replytocomment',
+        url: 'http://52.74.247.211:3000/replytocomment',
         data: data,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'

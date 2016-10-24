@@ -15,7 +15,7 @@ angular.module('frontendApp')
       var deferred = $q.defer();
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/login',
+        url: 'http://52.74.247.211:3000/login',
         data: data,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -40,7 +40,7 @@ angular.module('frontendApp')
       var deferred = $q.defer();
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/register',
+        url: 'http://52.74.247.211:3000/register',
         data: data,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
