@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Work+Sans:400,500,600,700,800,900');
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -7,7 +8,9 @@
 
 body {
   padding: 0;
-  background-color: #f7f7f7;
+  background-color: #F1F2F1;
+  font-family: 'Work Sans', sans-serif;
+  /*color: #d3d3d3;*/
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -101,6 +104,15 @@ navbar-right{
 }
 .navbar-default .navbar-nav > li > a {
     color: #fefefe;
+    cursor: pointer;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #13ffdf;
+    background-color: transparent;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #90ffbc;
+    background-color: transparent;
 }
 /* Main wrapper*/
 .main-wrapper{
@@ -116,15 +128,51 @@ navbar-right{
   padding: 5px;
 }
 .post-wrapper .post{
-  width:100%;
-  display: block;
-  border: 1px solid #ddd;
-  padding: 5px;
+    width: 100%;
+    display: block;
+    /*border: 1px solid #ddd;*/
+    padding: 5px;
+    position: relative;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    border-radius: 10px;
 }
+.post-wrapper .post:before, .post-wrapper .post:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.post-wrapper .post:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
 .post-wrapper .post .post-title{
   font-size: 25px;
   color: #2363ab;
   margin: 5px 0 10px 0;
+  font-family: 'Luckiest Guy', cursive;
 }
 .post-wrapper .post .post-meta {
   width: 100%;
@@ -186,6 +234,8 @@ navbar-right{
   min-height: 300px;
   display: block;
   border: 1px solid #ddd;
+  background-color: #ffffff;
+
 }
 .popular-posts h2{
   width: 100%;
@@ -334,6 +384,7 @@ position: absolute;
   right: 5px;
   top: 2px;
   line-height: 20px;
+  cursor: pointer;
 }
 .login-wrapper .register-screen {
 background-color: #FFF;
@@ -396,6 +447,7 @@ box-shadow: none;
   color: #444;
   display: block;
 	margin-top: 12px;
+  cursor: pointer;
 }
 
 /* Single Blog Post*/
@@ -409,6 +461,8 @@ box-shadow: none;
   display: block;
   border: 1px solid #ddd;
   padding: 5px;
+  position: relative;
+  background-color: #ffffff;
 }
 .single-post-wrapper .post .post-title{
   font-size: 25px;

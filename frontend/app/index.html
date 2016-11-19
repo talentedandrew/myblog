@@ -23,7 +23,7 @@
     <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="header" ng-controller="HeaderCtrl as vm">
+  <div class="header" ng-controller="HeaderCtrl as vm" >
     <div class="navbar navbar-default" role="navigation">
       <!--<div >-->
       <div class="navbar-header">
@@ -35,7 +35,7 @@
               <span class="icon-bar"></span>
             </button>
 
-        <a class="navbar-brand" href="#/">frontend</a>
+        <a class="navbar-brand" href="#/">UseDevOps</a>
       </div>
 
       <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -55,7 +55,7 @@
       </div>
       <!--</div>-->
     </div>
-    <div ng-if="vm.loginOn" class="login-wrapper" ng-init="showReg = false">
+    <div ng-if="vm.loginOn" class="  login-wrapper" ng-init="showReg = false" ng-cloak >
         <div class="close" ng-click="vm.closeLogin();">
           X
         </div>
@@ -80,13 +80,13 @@
                     </div>
 
                     <button class="btn btn-primary btn-large btn-block" type="submit">login</button>
-                    <a class="login-link" ng-click="showReg=!showReg">Register a new account?</a>
+                    <a class="login-link" ng-click="showReg = true">Register a new account?</a>
                     </form>
                 </div>
             </div>
         </div>
         <div class="register"  ng-show="showReg">
-            <div class="closeReg" ng-click="showReg=!showReg">x</div>
+            <a class="closeReg" ng-click="showReg = false">x</a>
             <div class="register-screen">
                 <div class="app-title">
                     <h1>Register</h1>
